@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+nav {
+    background: #444;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.experience {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.contact-icons a {
+    color: #333;
+    font-size: 2.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #0077b5;  /* LinkedIn blue, you can change this */
+    transform: scale(1.1);
+}
+
+/* Specific colors for each icon on hover */
+.contact-icons a:nth-child(1):hover {
+    color: #0077b5;  /* LinkedIn blue */
+}
+
+.contact-icons a:nth-child(2):hover {
+    color: #333;  /* GitHub dark gray */
+}
+
+.contact-icons a:nth-child(3):hover {
+    color: #D44638;  /* Gmail red */
+}
