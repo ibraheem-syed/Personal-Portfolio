@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    // const intro = "Hi, I'm Ibraheem";
+    // const typedElement = document.getElementById('type');
+    // let j = 0;
+    
+    // function typeWriters() {
+    //     if (j < intro.length) {
+    //         typedElement.innerHTML += intro.charAt(j);
+    //         j++;
+    //         setTimeout(typeWriters, 50); // Adjust speed here
+    //     }
+    // }
+    // setTimeout(typeWriters, 2000);
+    
     const text = "Senior at UC San Diego studying Computer Science";
     const typedTextElement = document.getElementById('typed-text');
     let i = 0;
@@ -12,7 +25,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Start the typing effect after a short delay
-    setTimeout(typeWriter, 2000);
+    setTimeout(typeWriter, 3000);
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
