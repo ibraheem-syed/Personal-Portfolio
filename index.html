@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibraheem Syed - Portfolio</title>
+    <title>Ibraheem Syed – Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1 class="fade-in">Hi, I'm Ibraheem</h1> 
-        <!--<h1 id="type"></h1> -->
-        <p id="typed-text"></p> 
+        <h1 class="fade-in">Hi, I'm Ibraheem</h1>
+        <p id="typed-text"></p>
         <a href="#about" class="cta-button">View My Work</a>
     </header>
-<!--test comments-->
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -25,32 +24,39 @@
         </ul>
     </nav>
 
-    <section id="about">
+    <section id="about" class="reveal">
         <h2>About Me</h2>
         <p>I'm a Computer Science major at UC San Diego, passionate about software engineering and embedded systems. With a strong academic background and diverse experiences, I'm eager to contribute to innovative projects in the tech industry.</p>
-        <p>Email: ibraheems208@gmail.com</p>
-        <p>Phone: (925)-487-2419</p>
+        <p>Email: <a href="mailto:isyed@ucsd.edu">isyed@ucsd.edu</a></p>
+        <p>Phone: (925) 487-2419</p>
         <p>Location: Dublin, CA</p>
     </section>
 
-    <section id="education">
+    <section id="education" class="reveal">
         <h2>Education</h2>
         <h3>University of California, San Diego</h3>
-        <p>Computer Science BS, Expected Graduation: December 2025</p>
-        <p>Relevant coursework:  Advanced Data Structures/Algorithms, Systems Programming, Embedded Systems, Operating Systems,
-            Computer Architecture, Artificial Intelligence, Software Engineering, Relational Databases</p>
+        <p>Computer Science BS, Expected Graduation: Dec 2025</p>
+        <p>Relevant coursework: Advanced Data Structures/Algorithms, Systems Programming, Embedded Systems, Operating Systems, Computer Architecture, Parallel Computing, Software Engineering, Relational Databases, Recommender Systems, Networked Services</p>
 
         <h3>Las Positas College</h3>
-        <p>Computer Science AS, Mathematics AS, May 2023</p>
-        <p>4.0 GPA in relevant coursework</p>
-        <p>Made Dean's List for 6 semesters</p>
+        <p>Associate’s in Computer Science &amp; Mathematics, Aug 2021 – May 2023</p>
+        <p>Dean’s List (6 semesters)</p>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
+    <section id="experience" class="reveal">
+        <h2>Work Experience</h2>
+
+        <div class="experience">
+            <h3>T-Mobile</h3>
+            <p>Machine Learning Intern, June 2025 – August 2025 • Overland Park, KS</p>
+            <ul>
+                <li>Incoming Summer 2025</li>
+            </ul>
+        </div>
+
         <div class="experience">
             <h3>Cognizant</h3>
-            <p>Machine Learning Intern, June 2024 – August 2024</p>
+            <p>Machine Learning Intern, June 2024 – August 2024 • Remote</p>
             <ul>
                 <li>Built scalable infrastructure with Hugging Face library to identify best RAG-based LLM for internal document retrieval</li>
                 <li>Finetuned selected LLAMA-3 model with Low Rank Adaptation, optimizing retrieval performance by 22%</li>
@@ -58,9 +64,10 @@
                 <li>Experimented with CNN and LLM hybrid architecture for better performance, finding neural networks overfit parameters</li>
             </ul>
         </div>
+
         <div class="experience">
-            <h3>NASA L'SPACE</h3>
-            <p>Engineering Fellowship, May 2023 – Aug 2023</p>
+            <h3>NASA L’SPACE</h3>
+            <p>Engineering Fellowship, May 2023 – Aug 2023 • Remote</p>
             <ul>
                 <li>Collaborated with 9 engineers to develop a Preliminary Design Report for a semi-autonomous rover mission to Ceres</li>
                 <li>Managed the Communications and Data Handling subsystem, considering cost, weight, and energy within a 300 million budget</li>
@@ -68,58 +75,34 @@
                 <li>Received guided mentorship from a NASA engineer regarding project specifications and milestones to successfully stay on track</li>
             </ul>
         </div>
+
         <div class="experience">
             <h3>Alameda County Library</h3>
-            <p>C++ Tutor, Jan 2022 – March 2022</p>
+            <p>Computer Science Tutor, Jan 2022 – Mar 2022 • Livermore, CA</p>
             <ul>
                 <li>Designed a C++ tutoring program to support computer science students in understanding core computer science concepts</li>
                 <li>Recruited, trained, and supervised team of 5 tutors, developing structured tutoring schedule to ensure tutoring for students</li>
                 <li>Provided hands-on debugging assistance to students using GDB, improving their problem-solving skills</li>
             </ul>
         </div>
-        <div class="experience">
-            <h3>Las Positas College Computer Science Club</h3>
-            <p>Club President, Aug 2022 – May 2023</p>
-            <ul>
-                <li>Led club initiative to enhance technical skills and networking, offering members growth opportunities and industry connections</li>
-                <li>Organized meetings, workshops, and competitions to promote technical skill-building and networking opportunities</li>
-            </ul>
-        </div>
-        <div class="experience">
-            <h3>Muslim Youth of North America (MYNA)</h3>
-            <p>Camp Counselor, Aug 2022</p>
-            <ul>
-                <li>Supervised and ensured the safety of campers in daily activities</li>
-                <li>Acted as a mentor and role model for campers</li>
-                <li>Maintained open and effective communication with campers and parents</li>
-                <li>Facilitated team-building exercises</li>
-            </ul>
-        </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="reveal">
         <h2>Skills</h2>
-        <p>C, C++, Rust, Java, Python, SQL, HTML, CSS, Javascript, Assembly (ARM), Numpy, Pandas, Docker,
-            Pytorch, Tensorflow, scikit-learn, Git, Github, Linux, Agile</p>
+        <p>C, C++, Rust, Java, Go, Python, SQL/PostgreSQL, OpenCL, HTML, CSS, JavaScript, ARM Assembly, NumPy, Pandas, OpenCV, Docker, PyTorch, TensorFlow, scikit-learn, Git, Linux, Agile</p>
     </section>
 
-    <section id="connect">
+    <section id="connect" class="reveal">
         <h2>Connect</h2>
         <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/ibraheem-syed03/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/ibraheem-syed" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:ibraheems208@gmail.com" aria-label="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
+            <a href="https://linkedin.com/in/ibraheem-syed03" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ibraheem-syed" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:isyed@ucsd.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Ibraheem Syed. All rights reserved.</p>
+        <p>&copy; 2025 Ibraheem Syed. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

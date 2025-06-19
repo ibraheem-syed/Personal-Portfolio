@@ -1,40 +1,43 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     background-color: #1a1a1a;
     color: #e0e0e0;
 }
 
-header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #2c2c2c;
-    color: #fff;
-}
-
+/* Fade-in / reveal */
 .fade-in {
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
 }
+@keyframes fadeIn { to { opacity: 1; } }
 
-@keyframes fadeIn {
-    to { opacity: 1; }
+/* Scroll-reveal base state */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+/* When in view */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+header {
+    height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center;
+    background-color: #2c2c2c;
 }
 
 #typed-text::after {
-    content: '|';
-    animation: blink 0.7s infinite;
+    content: '|'; animation: blink 0.7s infinite;
 }
-
-@keyframes blink {
-    to { opacity: 0; }
-}
+@keyframes blink { to { opacity: 0; } }
 
 .cta-button {
     margin-top: 2rem;
@@ -42,18 +45,15 @@ header {
     font-size: 1.1rem;
     color: #fff;
     background-color: #4db8ff;
-    border: none;
-    border-radius: 5px;
+    border: none; border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
 }
-
 .cta-button:hover {
     background-color: #3a8cc5;
     transform: translateY(-3px);
 }
-
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -63,32 +63,18 @@ header {
 nav {
     background: #333;
     padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky; top: 0; z-index: 1000;
 }
-
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    list-style: none; display: flex;
+    justify-content: center; margin: 0; padding: 0;
 }
-
-nav ul li {
-    margin: 0 15px;
-}
-
+nav ul li { margin: 0 15px; }
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; text-decoration: none;
     transition: color 0.3s ease;
 }
-
-nav ul li a:hover {
-    color: #4db8ff;
-}
+nav ul li a:hover { color: #4db8ff; }
 
 section {
     padding: 2rem;
@@ -98,9 +84,7 @@ section {
     border-radius: 8px;
 }
 
-h2 {
-    color: #4db8ff;
-}
+h2 { color: #4db8ff; }
 
 .experience {
     margin-bottom: 2rem;
@@ -112,33 +96,19 @@ h2 {
     gap: 2rem;
     margin-top: 1rem;
 }
-
 .contact-icons a {
     color: #e0e0e0;
     font-size: 2.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.contact-icons a:hover {
-    transform: scale(1.1);
-}
-
-.contact-icons a:nth-child(1):hover {
-    color: #0077b5;  /* LinkedIn blue */
-}
-
-.contact-icons a:nth-child(2):hover {
-    color: #6e5494;  /* GitHub purple */
-}
-
-.contact-icons a:nth-child(3):hover {
-    color: #D44638;  /* Gmail red */
-}
+.contact-icons a:hover { transform: scale(1.1); }
+.contact-icons a:nth-child(1):hover { color: #0077b5; }
+.contact-icons a:nth-child(2):hover { color: #6e5494; }
+.contact-icons a:nth-child(3):hover { color: #D44638; }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
 }

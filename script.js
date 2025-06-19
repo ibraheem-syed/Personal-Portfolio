@@ -1,39 +1,34 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    // const intro = "Hi, I'm Ibraheem";
-    // const typedElement = document.getElementById('type');
-    // let j = 0;
-    
-    // function typeWriters() {
-    //     if (j < intro.length) {
-    //         typedElement.innerHTML += intro.charAt(j);
-    //         j++;
-    //         setTimeout(typeWriters, 50); // Adjust speed here
-    //     }
-    // }
-    // setTimeout(typeWriters, 2000);
-    
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // typing intro
     const text = "Senior at UC San Diego studying Computer Science";
-    const typedTextElement = document.getElementById('typed-text');
+    const el = document.getElementById('typed-text');
     let i = 0;
-
     function typeWriter() {
         if (i < text.length) {
-            typedTextElement.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50); // Adjust speed here
+            el.innerHTML += text.charAt(i++);
+            setTimeout(typeWriter, 50);
         }
     }
-
-    // Start the typing effect after a short delay
     setTimeout(typeWriter, 3000);
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            document.querySelector(a.getAttribute('href'))
+                .scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    // scroll-reveal
+    const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                o.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 });
