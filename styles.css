@@ -90,6 +90,35 @@ h2 { color: #4db8ff; }
     margin-bottom: 2rem;
 }
 
+.experience-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+}
+
+.experience-row h3 {
+    margin: 0 0 0.25rem 0;
+    color: #4db8ff;
+}
+
+.experience-row p {
+    margin: 0;
+    color: #b0b0b0;
+    font-style: italic;
+}
+
 .contact-icons {
     display: flex;
     justify-content: center;
@@ -111,4 +140,14 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+.school-logo {
+    border-radius: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    width: 70px;
+    height: auto;
+    object-fit: contain;
 }
