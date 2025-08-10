@@ -3,135 +3,433 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibraheem Syed – Portfolio</title>
+    <title>Ibraheem Syed – Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="fade-in">Hi, I'm Ibraheem</h1>
-        <p id="typed-text"></p>
-        <a href="#about" class="cta-button">View My Work</a>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#connect">Connect</a></li>
-        </ul>
+    <div id="particles-js"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">IS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#connect" class="nav-link">Connect</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <section id="about" class="reveal">
-        <h2>About Me</h2>
-        <p>I'm a Computer Science major at UC San Diego, passionate about software engineering and embedded systems. With a strong academic background and diverse experiences, I'm eager to contribute to innovative projects in the tech industry.</p>
-        <p>Email: <a href="mailto:isyed@ucsd.edu">isyed@ucsd.edu</a></p>
-        <p>Phone: (925) 487-2419</p>
-        <p>Location: Dublin, CA</p>
-    </section>
-
-    <section id="education" class="reveal">
-        <h2>Education</h2>
-        <div class="experience-row">
-            <img src="images/university_of_california_at_san_diego_logo.jpeg" alt="UC San Diego Logo" class="company-logo school-logo" />
-            <div>
-                <h3>University of California, San Diego</h3>
-                <p>Computer Science BS, Expected Graduation: Dec 2025</p>
-                <p>Relevant coursework: Advanced Data Structures/Algorithms, Systems Programming, Embedded Systems, Operating Systems, Computer Architecture, Parallel Computing, Software Engineering, Relational Databases, Recommender Systems, Networked Services</p>
-            </div>
-        </div>
-        <div class="experience-row">
-            <img src="images/1631380782992.jpeg" alt="Las Positas College Logo" class="company-logo school-logo" />
-            <div>
-                <h3>Las Positas College</h3>
-                <p>Associate's in Computer Science &amp; Mathematics, Aug 2021 – May 2023</p>
-                <p>Dean's List (6 semesters)</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="reveal">
-        <h2>Work Experience</h2>
-
-        <div class="experience">
-            <div class="experience-row">
-                <img src="images/t_mobile_logo.jpeg" alt="T-Mobile Logo" class="company-logo" />
-                <div>
-                    <h3>T-Mobile</h3>
-                    <p>Machine Learning Intern, June 2025 – August 2025 • Overland Park, KS</p>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Hi, I'm Ibraheem</span>
+                </h1>
+                <p id="typed-text" class="hero-subtitle"></p>
+                <div class="hero-buttons">
+                    <a href="#about" class="cta-button primary">View My Work</a>
+                    <a href="#connect" class="cta-button secondary">Get In Touch</a>
                 </div>
             </div>
-            <ul>
-                <li>Incoming Summer 2025</li>
-            </ul>
-        </div>
-
-        <div class="experience">
-            <div class="experience-row">
-                <img src="images/cognizant_logo.jpeg" alt="Cognizant Logo" class="company-logo" />
-                <div>
-                    <h3>Cognizant</h3>
-                    <p>Machine Learning Intern, June 2024 – August 2024 • Remote</p>
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <div class="floating-card">
+                    <div class="card-content">
+                        <div class="tech-stack">
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="700">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <ul>
-                <li>Built scalable infrastructure with Hugging Face library to identify best RAG-based LLM for internal document retrieval</li>
-                <li>Finetuned selected LLAMA-3 model with Low Rank Adaptation, optimizing retrieval performance by 22%</li>
-                <li>Improved deliverable and debugging efficiency through the usage of optimized LLAMA-3 document retrieval LLM</li>
-                <li>Experimented with CNN and LLM hybrid architecture for better performance, finding neural networks overfit parameters</li>
-            </ul>
         </div>
+        <button class="scroll-indicator" onclick="scrollToAbout()">
+            <div class="scroll-arrow"></div>
+        </button>
+    </header>
 
-        <div class="experience">
-            <div class="experience-row">
-                <img src="images/nasa_logo.jpeg" alt="NASA Logo" class="company-logo" />
-                <div>
-                    <h3>NASA L'SPACE</h3>
-                    <p>Engineering Fellowship, May 2023 – Aug 2023 • Remote</p>
+    <main>
+        <section id="about" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="gradient-text">About Me</span>
+                </h2>
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <p class="about-description">
+                            I'm a Computer Science major at UC San Diego, passionate about software engineering and embedded systems. 
+                            With a strong academic background and diverse experiences, I'm eager to contribute to innovative projects in the tech industry.
+                        </p>
+                        <div class="contact-info">
+                            <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:isyed@ucsd.edu">isyed@ucsd.edu</a>
+                            </div>
+                            <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                                <i class="fas fa-phone"></i>
+                                <span>(925) 487-2419</span>
+                            </div>
+                            <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Dublin, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats" data-aos="fade-left">
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Internships</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <ul>
-                <li>Collaborated with 9 engineers to develop a Preliminary Design Report for a semi-autonomous rover mission to Ceres</li>
-                <li>Managed the Communications and Data Handling subsystem, considering cost, weight, and energy within a 300 million budget</li>
-                <li>Created software flowcharts for the rover's semi-autonomous functions and presented the mission proposal to industry panels</li>
-                <li>Received guided mentorship from a NASA engineer regarding project specifications and milestones to successfully stay on track</li>
-            </ul>
-        </div>
+        </section>
 
-        <div class="experience">
-            <div class="experience-row">
-                <img src="images/1631353328052.jpeg" alt="Alameda County Library Logo" class="company-logo" />
-                <div>
-                    <h3>Alameda County Library</h3>
-                    <p>Computer Science Tutor, Jan 2022 – Mar 2022 • Livermore, CA</p>
+        <section id="education" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="gradient-text">Education</span>
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="education-card">
+                                <div class="education-header">
+                                    <img src="images/university_of_california_at_san_diego_logo.jpeg" alt="UC San Diego Logo" class="education-logo" />
+                                    <div class="education-info">
+                                        <h3>University of California, San Diego</h3>
+                                        <p class="education-degree">Computer Science BS</p>
+                                        <p class="education-date">Expected Graduation: Dec 2025</p>
+                                    </div>
+                                </div>
+                                <div class="education-details">
+                                    <p><strong>Relevant coursework:</strong> Advanced Data Structures/Algorithms, Systems Programming, Embedded Systems, Operating Systems, Computer Architecture, Parallel Computing, Software Engineering, Relational Databases, Recommender Systems, Networked Services</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="education-card">
+                                <div class="education-header">
+                                    <img src="images/1631380782992.jpeg" alt="Las Positas College Logo" class="education-logo" />
+                                    <div class="education-info">
+                                        <h3>Las Positas College</h3>
+                                        <p class="education-degree">Associate's in Computer Science & Mathematics</p>
+                                        <p class="education-date">Aug 2021 – May 2023</p>
+                                    </div>
+                                </div>
+                                <div class="education-details">
+                                    <p><strong>Achievements:</strong> Dean's List (4 semesters)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <ul>
-                <li>Designed a C++ tutoring program to support computer science students in understanding core computer science concepts</li>
-                <li>Recruited, trained, and supervised team of 5 tutors, developing structured tutoring schedule to ensure tutoring for students</li>
-                <li>Provided hands-on debugging assistance to students using GDB, improving their problem-solving skills</li>
-            </ul>
+        </section>
+
+        <section id="experience" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="gradient-text">Work Experience</span>
+                </h2>
+                <div class="experience-grid">
+                    <div class="experience-card" data-aos="fade-up">
+                        <div class="experience-header">
+                            <img src="images/t_mobile_logo.jpeg" alt="T-Mobile Logo" class="company-logo" />
+                            <div class="experience-info">
+                                <h3>T-Mobile</h3>
+                                <p class="experience-role">Machine Learning Intern</p>
+                                <p class="experience-date">June 2025 – August 2025 • Overland Park, KS</p>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Benchmarked AI retrieval methods including RAG, fine-tuning, and graph reasoning for RF-domain Q&A</li>
+                                <li>Architected multi-hop knowledge graph text retriever with Neo4j and ChromaDB, using custom traversal heuristics</li>
+                                <li>Developed modular retrieval pipelines combining vector DBs and structured graphs for contextual LLM input</li>
+                                <li>Analyzed tradeoffs between model size, context injection, and fine-tuning to support low-latency, power-efficient deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="experience-header">
+                            <img src="images/cognizant_logo.jpeg" alt="Cognizant Logo" class="company-logo" />
+                            <div class="experience-info">
+                                <h3>Cognizant</h3>
+                                <p class="experience-role">Machine Learning Intern</p>
+                                <p class="experience-date">June 2024 – August 2024 • Remote</p>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Built scalable infrastructure with Hugging Face library to identify best RAG-based LLM for internal document retrieval</li>
+                                <li>Finetuned selected LLAMA-3 model with Low Rank Adaptation, optimizing retrieval performance by 22%</li>
+                                <li>Improved deliverable and debugging efficiency through the usage of optimized LLAMA-3 document retrieval LLM</li>
+                                <li>Experimented with CNN and LLM hybrid architecture for better performance, finding neural networks overfit parameters</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="experience-header">
+                            <img src="images/nasa_logo.jpeg" alt="NASA Logo" class="company-logo" />
+                            <div class="experience-info">
+                                <h3>NASA L'SPACE</h3>
+                                <p class="experience-role">Engineering Fellowship</p>
+                                <p class="experience-date">May 2023 – Aug 2023 • Remote</p>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Collaborated with 9 engineers to develop a Preliminary Design Report for a semi-autonomous rover mission to Ceres</li>
+                                <li>Managed the Communications and Data Handling subsystem, considering cost, weight, and energy within a 300 million budget</li>
+                                <li>Created software flowcharts for the rover's semi-autonomous functions and presented the mission proposal to industry panels</li>
+                                <li>Received guided mentorship from a NASA engineer regarding project specifications and milestones to successfully stay on track</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="experience-header">
+                            <img src="images/1631353328052.jpeg" alt="Alameda County Library Logo" class="company-logo" />
+                            <div class="experience-info">
+                                <h3>Alameda County Library</h3>
+                                <p class="experience-role">Computer Science Tutor</p>
+                                <p class="experience-date">Jan 2022 – Mar 2022 • Livermore, CA</p>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Designed a C++ tutoring program to support computer science students in understanding core computer science concepts</li>
+                                <li>Recruited, trained, and supervised team of 5 tutors, developing structured tutoring schedule to ensure tutoring for students</li>
+                                <li>Provided hands-on debugging assistance to students using GDB, improving their problem-solving skills</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="gradient-text">Skills & Technologies</span>
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="fade-up">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="images/C.png" alt="C" />
+                                <span>C</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="150">
+                                <img src="images/C++.png" alt="C++" />
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                <img src="images/java.png" alt="Java" />
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="250">
+                                <img src="images/python.png" alt="Python" />
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                                <img src="images/golang.png" alt="Golang" />
+                                <span>Golang</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Machine Learning & AI</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="350">
+                                <img src="images/pytorch.jpeg" alt="PyTorch" />
+                                <span>PyTorch</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                                <img src="images/tensorflow.png" alt="TensorFlow" />
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+                                <img src="images/scikitlearn.png" alt="scikit-learn" />
+                                <span>scikit-learn</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                                <img src="images/huggingface.png" alt="Hugging Face" />
+                                <span>Hugging Face</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="550">
+                                <i class="fas fa-robot" style="font-size: 60px; color: #4facfe;"></i>
+                                <span>LLMs</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fas fa-search" style="font-size: 60px; color: #4facfe;"></i>
+                                <span>RAG</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Data Science & Analytics</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="650">
+                                <img src="images/numpy.png" alt="NumPy" />
+                                <span>NumPy</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
+                                <img src="images/pandas.png" alt="Pandas" />
+                                <span>Pandas</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="750">
+                                <i class="fas fa-chart-line" style="font-size: 60px; color: #4facfe;"></i>
+                                <span>Data Analysis</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
+                                <i class="fas fa-database" style="font-size: 60px; color: #4facfe;"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="850">
+                                <img src="images/postgresql.png" alt="PostgreSQL" />
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Vector Databases & Storage</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
+                                <img src="images/chromadb.png" alt="ChromaDB" />
+                                <span>ChromaDB</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="950">
+                                <img src="images/neo4j.png" alt="Neo4j" />
+                                <span>Neo4j</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">
+                                <img src="images/weaviate.jpeg" alt="Weaviate" />
+                                <span>Weaviate</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Web Technologies</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1050">
+                                <img src="images/html.png" alt="HTML" />
+                                <span>HTML</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1100">
+                                <img src="images/css.png" alt="CSS" />
+                                <span>CSS</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1150">
+                                <img src="images/javascript.png" alt="JavaScript" />
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                        <h3>DevOps & Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1200">
+                                <img src="images/git.png" alt="Git" />
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1250">
+                                <img src="images/github.png" alt="GitHub" />
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1300">
+                                <img src="images/docker.png" alt="Docker" />
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1350">
+                                <img src="images/linux.png" alt="Linux" />
+                                <span>Linux</span>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1400">
+                                <i class="fas fa-cogs" style="font-size: 60px; color: #4facfe;"></i>
+                                <span>Agile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="gradient-text">Let's Connect</span>
+                </h2>
+                <div class="connect-content">
+                    <p class="connect-text" data-aos="fade-up">
+                        I'm always interested in new opportunities and collaborations. 
+                        Feel free to reach out if you'd like to work together or just say hello!
+                    </p>
+                    <div class="contact-icons" data-aos="fade-up" data-aos-delay="200">
+                        <a href="https://linkedin.com/in/ibraheem-syed03" target="_blank" class="contact-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/ibraheem-syed" target="_blank" class="contact-icon github" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:isyed@ucsd.edu" class="contact-icon email" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ibraheem Syed. All rights reserved.</p>
         </div>
-    </section>
-
-    <section id="skills" class="reveal">
-        <h2>Skills</h2>
-        <p>C, C++, OpenCL, Java, Golang, Python, SQL, PostgreSQL, HTML, CSS, Javascript, Assembly (ARM), Numpy, Pandas, Docker, Pytorch, Tensorflow, scikit-learn, Git, Github, Linux, Agile</p>
-    </section>
-
-    <section id="connect" class="reveal">
-        <h2>Connect</h2>
-        <div class="contact-icons">
-            <a href="https://linkedin.com/in/ibraheem-syed03" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/ibraheem-syed" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="mailto:isyed@ucsd.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Ibraheem Syed. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
